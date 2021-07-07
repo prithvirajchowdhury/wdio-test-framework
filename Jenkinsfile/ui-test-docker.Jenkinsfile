@@ -25,11 +25,11 @@ pipeline {
                 sh 'npx wdio run ./wdio.conf.js'
               }   
             } 
-            post {      
+    }
+    post {      
                 always {          
                     junit '*.xml'
                 }
             }
-    }
 }
 
